@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #c56b0b;
+  --primary-color-dark: #c56b0b;
+  --secondary-color: #ca8a04;
+  --text-dark: #c56b0b;
+  --text-light: #ffffff;
+  --extra-light: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: url(../img/background.jpg) center/cover fixed no-repeat;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem; /* Ajuste a propriedade de padding conforme necessário */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+  
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+nav .logo a:hover {
+    color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+    display: none;
+}
+
+nav input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+  
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+  }
+  
+ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: 0.3s;
+  }
+  
+ul li a:hover {
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
+
+#aboutUs {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#aboutUs img {
+    width: 400px;
+    position: relative;
+    top: 190px;
+    margin-left: 150px;
+    border-radius: 10px;
+}
+
+.content {
+    margin: 200px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content h2 {
+    font-size: 50px;
+    color: var(--primary-color);
+}
+
+#logout-icon{
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.content h4 {
+    font-size: 20px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.description {
+    color: #fff;
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 100;
+}
+
+.btn {
+  font-weight: bold;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.4s;
+  background-color: var(--text-dark);
+
+  /* Adicione a regra para ajustar a largura */
+  width: 750px; /* Ajuste conforme necessário */
+}
+
+.btn:hover {
+    border: 2px solid #ffca70;
+    background: transparent;
+    color: #ffca70;
+}
+
+.login-btn {
+    text-decoration: none;
+    background-color: white;
+    color: var(--primary-color);
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    border: 2px solid var(--primary-color);
+}
+
+.login-btn a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.login-btn:hover {
+    background-color: var(--primary-color-dark);
+    transition: all 0.4s ease-in-out;
+}
+
+.login-btn:hover a {
+    color: #ffffff;
+}
+
+
+@media screen and (max-width: 790px) {
+    #aboutUs img {
+        width: 200px; /* Defina um tamanho fixo para a largura */
+        height: 200px; /* Mantenha a altura igual à largura */
+        object-fit: cover; /* Evita distorções mantendo a proporção e cobrindo o contêiner */
+        border-radius: 50%; /* Torna a imagem redonda, usando 50% como valor para o raio do canto */
+    }
+    
+
+    #aboutUs {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+}

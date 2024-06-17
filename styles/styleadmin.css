@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #c56b0b;
+    --primary-color-dark: #92510b;
+    --secondary-color: #ca8a04;
+    --text-dark: #c56b0b;
+    --text-light: #ffffff;
+    --extra-light: #ffffff;
+    --max-width: 1200px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url(../img/background.jpg);
+    overflow: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-book-btn {
+    background-color: #ba3737;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container .remove-book-btn:hover {
+    background-color: #45a049;
+}
+
+#logout-icon{
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+.form-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
